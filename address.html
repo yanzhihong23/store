@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>收货地址</title>
+	<link rel="stylesheet" type="text/css" href="styles/libs/animation.css">
+	<link rel="stylesheet" type="text/css" href="styles/address.css">
+	<link rel="stylesheet" type="text/css" href="styles/loading.css">
+</head>
+<body>
+	<section class="divider">
+		<input type="text" placeholder="收货人姓名" id="name" required />
+		<input type="tel" placeholder="手机号码" maxlength="11" id="mobile" required />
+	</section>
+
+	<section class="divider">
+		<input type="tel" placeholder="邮政编码" maxlength="6" id="post_code" required />
+		<div>
+			<input type="text" placeholder="省" maxlength="10" class="third" id="province" required readonly />
+			<input type="text" placeholder="市" maxlength="10" class="third" id="city" required readonly />
+			<input type="text" placeholder="区/县" maxlength="10" class="third" id="district" required readonly />
+		</div>
+		<input type="text" placeholder="街道" maxlength="20" id="street" required readonly />
+	</section>
+
+	<section class="divider">
+		<textarea rows="3" placeholder="详细地址" id="address" required></textarea>
+	</section>
+
+	<section class="button-wrapper">
+		<button class="confirm">确认并支付</button>
+	</section>
+
+	<!-- loading -->
+	<article class="loading">
+    <div class="spinner">
+      <div class="bubble-1"></div>
+      <div class="bubble-2"></div>
+    </div>
+	</article>
+
+	<article class="alert">
+		<div class="wrapper">
+			<div class="content">contentspdfdsf <br> sfsfs</div>
+			<div class="button">知道了~</div>
+		</div>
+	</article>
+
+	<!-- selector for province, city, district, street -->
+	<article class="selector animated slideInUp flash" id="selector">
+	</article>
+
+	<script src="scripts/libs/zepto.min.js"></script>
+	<script src="scripts/libs/md5.min.js"></script>
+	<script src="scripts/libs/iscroll-lite.js"></script>
+	<script src="scripts/utils.js"></script>
+	<script src="scripts/address.js"></script>
+</body>
+</html>

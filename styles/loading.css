@@ -1,0 +1,53 @@
+.loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.1);
+	z-index: 1000;
+	display: none;
+}
+
+.loading .spinner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+}
+
+.loading .spinner {animation: loading 2s linear infinite;}
+.loading .bubble-1, .loading .bubble-2 {animation: bounce 2s ease-in-out infinite;}
+.loading .bubble-2 {animation-delay: -1.0s;}
+
+.spinner{
+	position: relative;
+	width: 45px;
+	height: 45px;
+	margin: 0 auto;
+}
+
+.bubble-1,
+.bubble-2 {
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #FF764C;
+}
+
+.bubble-2 {
+    top: auto;
+    bottom: 0;
+}
+
+@keyframes loading {
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes bounce  {
+  0%, 100% {transform: scale(0.0);}
+  50% {transform: scale(1.0);}
+}

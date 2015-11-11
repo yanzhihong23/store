@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+	font-size: 14px;
+	color: #333;
+	line-height: 1.42;
+	background: #FFE7CE;
+}
+
+body:after{
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg-02@2x.png) no-repeat center;
+	background-size: contain;
+	opacity: 0.2;
+	z-index: -1;
+}
+
+header{
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	color: #FF764C;
+	margin: 15% 8%;
+	padding: 15px 0;
+	border: dashed 2px #FF764C;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	background: rgba(237,168,97,1);
+	z-index: -1;
+}
+
+.content{
+	position: absolute;
+	bottom: 27%;
+	width: 100%;
+	height: 35%;
+}
+
+.gas{
+	position: absolute;
+	width: 20%;
+	left: 8%;
+	bottom: 3%;
+}
+
+.motorcycle{
+	position: absolute;
+	width: 68%;
+	bottom: 0;
+	right: 10%;
+}
+
+img{
+	display: block;
+	width: 100%;
+}
+
+.customer-service{
+	position: absolute;
+	bottom: 15%;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+.animated.slow{
+	-webkit-animation-duration: 6s;
+	animation-duration: 6s;
+}
+
