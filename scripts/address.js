@@ -150,9 +150,9 @@ $(function() {
 								return {
 									name: obj.provinceName,
 									id: obj.provinceId
-								}.sort(function(a, b) {
-									return a.id - b.id;
-								});
+								};
+							}).sort(function(a, b) {
+								return a.id - b.id;
 							});
 							render();
 						}
@@ -171,6 +171,8 @@ $(function() {
 									name: obj.cityName,
 									id: obj.cityId
 								};
+							}).sort(function(a, b) {
+								return a.id - b.id;
 							});
 							render();
 						}
@@ -189,6 +191,8 @@ $(function() {
 									name: obj.countyName,
 									id: obj.countyId
 								};
+							}).sort(function(a, b) {
+								return a.id - b.id;
 							});
 							render();
 						}
@@ -205,6 +209,8 @@ $(function() {
 									name: obj.townName,
 									id: obj.townId
 								};
+							}).sort(function(a, b) {
+								return a.id - b.id;
 							});
 							render();
 
