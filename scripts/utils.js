@@ -1,6 +1,6 @@
 (function() {
 	var Utils = function() {
-		this.HOST = (/zaijiadd.com/.test(location.host) ? location.protocol + '//' + location.host : 'http://172.10.140.46:8080') + '/ddhomeapp';
+		this.HOST = (/zaijiadd.com/.test(location.host) ? location.protocol + '//' + location.host : 'http://b2b.zaijiadd.com') + '/ddhomeapp';
 	};
 
 	Utils.prototype.getSearch = function() {

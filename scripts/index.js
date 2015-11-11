@@ -1,25 +1,20 @@
 $(function() {
 	var utils = new Utils(),
 			search = utils.getSearch(),
-			zjtoken = search.zjtoken || '64C8B923-8ABE-42CE-ABF5-AEBACDA09DF3-75022-00009F62C13819AC`AATmZNU1hZX/rUCJTc2o4Z5bMbj9Ab7I`1',
-			store_id = search.store_id || 7,
-			// zjtoken = search.zjtoken,
-			// store_id = search.store_id,
+			zjtoken = search.zjtoken, //'64C8B923-8ABE-42CE-ABF5-AEBACDA09DF3-75022-00009F62C13819AC`AATmZNU1hZX/rUCJTc2o4Z5bMbj9Ab7I`1'
+			store_id = search.store_id, // 7,
 			headers = {
 				'Content-Type': 'application/json',
 				zjtoken: zjtoken,
 				store_id: store_id
 			};
 
-	// alert('zjtoken: ' + zjtoken);
-	// alert('store_id: ' + store_id);
-
 	if(zjtoken && store_id) {
 		localStorage.setItem('headers', JSON.stringify(headers));
 	}
 
 	// tmp
-	location.href = 'progress.html?type=disabled';
+	// location.href = 'progress.html?type=disabled';
 
 	var switchCheck = function() {
 		$.ajax({
@@ -69,5 +64,7 @@ $(function() {
 			}
 		});
 	};
+
+	switchCheck();
 	
 });
