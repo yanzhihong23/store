@@ -14,8 +14,8 @@ $(function() {
 						var data = data.data.productInfo;
 						var packageA = dataFormatter(data[0].productList);
 						var packageB = dataFormatter(data[1].productList);
-						packageA.coupon = 1000;
-						packageB.coupon = 1500;
+						// packageA.coupon = 1000;
+						// packageB.coupon = 1500;
 						packageA.subject = '套餐A';
 						packageB.subject = '套餐B';
 						packageA.productId = data[0].productId;

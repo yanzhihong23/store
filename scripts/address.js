@@ -98,7 +98,8 @@ $(function() {
 					doPay({
 						orderId: data.orderId,
 						subject: packageData.subject,
-						totalFee: packageData.totalFee - packageData.coupon
+						totalFee: packageData.totalFee
+						// totalFee: packageData.totalFee - packageData.coupon
 					});
 				} else {
 

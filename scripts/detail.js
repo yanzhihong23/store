@@ -188,7 +188,8 @@ $(function() {
 
 		var totalFee = data.totalFee,
 				coupon = data.coupon;
-		$('.result .pull-right').html('￥' + totalFee.toFixed(2) + ' - ' + '￥' + coupon.toFixed(2) + ' = <em>￥'  + (totalFee - coupon).toFixed(2) + '</em>');
+		// $('.result .pull-right').html('￥' + totalFee.toFixed(2) + ' - ' + '￥' + coupon.toFixed(2) + ' = <em>￥'  + (totalFee - coupon).toFixed(2) + '</em>');
+		$('.result .pull-right').html('<em>￥'  + totalFee.toFixed(2) + '</em>');
 
 		eventInit();
 	};
