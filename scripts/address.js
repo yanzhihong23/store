@@ -1,11 +1,6 @@
 $(function() {
-	var utils = new Utils();
+	var utils = new Utils(), headers = utils.getHeaders();
 	var provinceId, cityId, districtId, streetId, allowEmptyStreet = false;
-
-	var headers = localStorage.getItem('headers');
-	if(headers) {
-		headers = JSON.parse(headers);
-	}
 
 	var doPay = function(obj) {
 		var GATEWAY = 'https://mapi.alipay.com/gateway.do?',

@@ -1,17 +1,6 @@
 $(function() {
-	var utils = new Utils(),
-			search = utils.getSearch(),
-			zjtoken = search.zjtoken, //'64C8B923-8ABE-42CE-ABF5-AEBACDA09DF3-75022-00009F62C13819AC`AATmZNU1hZX/rUCJTc2o4Z5bMbj9Ab7I`1',
-			store_id = search.store_id, // 7,
-			headers = {
-				'Content-Type': 'application/json',
-				zjtoken: zjtoken,
-				store_id: store_id
-			};
-
-	if(zjtoken && store_id) {
-		localStorage.setItem('headers', JSON.stringify(headers));
-	}
+	var utils = new Utils();
+	utils.init();
 
 	// tmp
 	// location.href = 'progress.html?type=disabled';
@@ -44,7 +33,7 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: utils.HOST + '/authen/authenUserType',
-			headers: headers,
+			headers: utils.getHeaders(),
 			timeout: 5000,
 			beforeSend: function(xhr, settings) {
 				$('.loading').show();

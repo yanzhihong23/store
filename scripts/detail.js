@@ -55,67 +55,6 @@ $(function() {
 		};
 	};
 
-	// mock
-	var mock = function() {
-		var data = [
-            {
-                "productId": "100001",
-                "productList": [
-                    {
-                        "categoryId": 9,
-                        "categoryCode": "A",
-                        "categoryName": "饼干糕点",
-                        "goodsId": "AA1",
-                        "goodsName": "格力高百奇牛奶味",
-                        "count": 1,
-                        "unitPrice": 5,
-                        "totalAmount": 5
-                    },
-                    {
-                        "categoryId": 9,
-                        "categoryCode": "A",
-                        "categoryName": "饼干糕点",
-                        "goodsId": "AA2",
-                        "goodsName": "格力高百奇草莓味",
-                        "count": 10,
-                        "unitPrice": 6,
-                        "totalAmount": 60
-                    }
-                ]
-            },
-            {
-                "productId": "100002",
-                "productList": [
-                    {
-                        "categoryId": 9,
-                        "categoryCode": "A",
-                        "categoryName": "饼干糕点",
-                        "goodsId": "AA1",
-                        "goodsName": "格力高百奇牛奶味",
-                        "count": 1,
-                        "unitPrice": 5,
-                        "totalAmount": 5
-                    },
-                    {
-                        "categoryId": 9,
-                        "categoryCode": "A",
-                        "categoryName": "饼干糕点",
-                        "goodsId": "AA2",
-                        "goodsName": "格力高百奇草莓味",
-                        "count": 10,
-                        "unitPrice": 6,
-                        "totalAmount": 60
-                    }
-                ]
-            }
-        ];
-
-    var packageA = dataFormatter(data[0].productList);
-    console.log(packageA);
-	};
-
-	// mock();
-
 	var render = function(data) {
 		var cats = data.cats;
 		var navFragment = document.createDocumentFragment();

@@ -1,9 +1,6 @@
 $(function() {
-	var utils = new Utils();
-	var headers = localStorage.getItem('headers');
-	if(headers) {
-		headers = JSON.parse(headers);
-	}
+	var utils = new Utils(),
+			headers = utils.getHeaders();
 
 	$.ajax({
 		type: 'GET',
