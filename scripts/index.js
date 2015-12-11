@@ -2,6 +2,10 @@ $(function() {
 	var utils = new Utils();
 	utils.init();
 
+	var search = utils.getSearch();
+	var isFull = !!search.version;
+	localStorage.setItem('isFull', isFull);
+
 	// tmp
 	// location.href = 'progress.html?type=disabled';
 
