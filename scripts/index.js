@@ -58,6 +58,11 @@ $(function() {
 		});
 	};
 
-	switchCheck();
+	if(search.store_id == 58) {
+		location.href = 'http://b2b.zaijiadd.com/h5/store_new/index.html' + location.search;
+	} else {
+		switchCheck();
+	}
+	
 	
 });
