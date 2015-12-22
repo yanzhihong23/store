@@ -19,10 +19,10 @@ $(function() {
 	}
 
   $('header .back').click(function(e) {
-    console.log('back');
     if(window.zjddapp) {
-      alert('has window.zjddapp');
       zjddapp.popWebViewController(); // back to app
+    } else {
+      alert('no zjddapp');
     }
   });
 });

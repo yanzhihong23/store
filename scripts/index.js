@@ -58,11 +58,34 @@ $(function() {
 		});
 	};
 
-	if(search.store_id == 58) {
-		location.href = 'http://b2b.zaijiadd.com/h5/store_new/index.html' + location.search;
-	} else {
-		switchCheck();
-	}
+	// if(search.store_id == 58) {
+		$.ajax({
+			type: 'POST',
+			url: utils.HOST + '/store/isAllowed',
+			headers: utils.getHeaders(),
+			timeout: 5000,
+			beforeSend: function(xhr, settings) {
+				$('.loading').show();
+			},
+			success: function(data) {
+				if(data.flag === 1) {
+					location.href = 'http://b2b.zaijiadd.com/h5/store_new/index.html' + location.search;
+				} else {
+					location.href = 'progress.html?type=disabled&v=1.02';
+				}
+			},
+			error: function(err) {
+				location.href = 'progress.html?type=disabled&v=1.02';
+				console.log('ajax error');
+			},
+			complete: function(xhr, status) {
+				$('.loading').hide();
+			}
+		});
+	// } else {
+	// 	switchCheck();
+	// }
+
 	
 	
 });
